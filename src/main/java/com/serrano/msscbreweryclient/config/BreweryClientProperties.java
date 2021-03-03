@@ -8,15 +8,21 @@ import org.springframework.boot.context.properties.ConstructorBinding;
 public class BreweryClientProperties {
 
     private final String beerResourcePath;
+    private final String customerResourcePath;
     private final String apiHost;
 
-    public BreweryClientProperties(String beerResourcePath, String apiHost) {
+    public BreweryClientProperties(String beerResourcePath, String customerResourcePath, String apiHost) {
         this.beerResourcePath = beerResourcePath;
+        this.customerResourcePath = customerResourcePath;
         this.apiHost = apiHost;
     }
 
     public String getBeerResourcePath() {
         return beerResourcePath;
+    }
+
+    public String getCustomerResourcePath() {
+        return customerResourcePath;
     }
 
     public String getApiHost() {
